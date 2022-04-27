@@ -1,5 +1,5 @@
 # Url Shortner MVP
-
+Work in progress
 # How to install
 
 # How to use
@@ -32,14 +32,14 @@
 
 ## URL Management
 
-- shorten url
+- shorten url [Done]
 - list users url
 
 ## URL Redirect
 
 This is the redirect API service, It have the following capabilities:
 
-- Redirect
+- Redirect [Done]
 
 ## Gateway
 
