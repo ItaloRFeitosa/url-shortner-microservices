@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS short_urls (
+    ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Title VARCHAR(255) NOT NULL,
+    Description VARCHAR(2000),
+    RedirectTo MEDIUMTEXT NOT NULL,
+    UserID  VARCHAR(36) NOT NULL, 
+    CreatedAt DATETIME NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE INDEX idx_user_urls ON short_urls (UserID);
