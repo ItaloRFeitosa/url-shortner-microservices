@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/dto"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/service"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/dto"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/service"
 )
 
 type Handler struct {

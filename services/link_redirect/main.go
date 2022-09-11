@@ -6,10 +6,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/italorfeitosa/url-shortner-mvp/libs/encoder"
 	"github.com/italorfeitosa/url-shortner-mvp/libs/environment"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/event_handler"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/handler"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/infra"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/service"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/event_handler"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/handler"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/infra"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/service"
 )
 
 func main() {

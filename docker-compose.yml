@@ -13,14 +13,13 @@ services:
       - MYSQL_USER=user
       - MYSQL_DATABASE=url_management
   localstack_main:
-    image: local-italo 
+    image: localstack/localstack:latest
     network_mode: bridge
     ports:
       - "127.0.0.1:4510-4559:4510-4559"  # external service port range
       - "127.0.0.1:4566:4566"            # LocalStack Edge Proxy
     environment:
       - DEBUG=1
-      - LEGACY_PERSISTENCE=true
       - DATA_DIR=/tmp/localstack/data
       - DOCKER_HOST=unix:///var/run/docker.sock
       - SERVICES=dynamodb,sqs,sns

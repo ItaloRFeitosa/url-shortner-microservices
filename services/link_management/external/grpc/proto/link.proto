@@ -1,0 +1,30 @@
+syntax = "proto3";
+package proto;
+option go_package = ".;proto";
+
+service LinkManagementService {
+    rpc CreateLink(CreateLinkRequest) returns (LinkReply);
+}
+
+message CreateLinkRequest {
+    string workspace_id = 1;
+    string redirect_to  = 2;
+    string title        = 3;
+    string description  = 4;
+}
+
+message LinkData {
+    int64 id            = 1;
+    string workspace_id = 2;
+    string slug         = 3;
+    string redirect_to  = 4;
+    string title        = 5;
+    string description  = 6;
+    string created_at   = 7;
+}
+
+message LinkReply {
+    string message = 1;
+    LinkData data  = 2;
+    bool error     = 3;
+}

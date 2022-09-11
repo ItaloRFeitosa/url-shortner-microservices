@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/domain"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/dto"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/domain"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/dto"
 )
 
 type ServiceImpl struct {

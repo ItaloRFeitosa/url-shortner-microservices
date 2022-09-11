@@ -6,8 +6,8 @@ import (
 
 	"github.com/italorfeitosa/url-shortner-mvp/libs/event"
 	"github.com/italorfeitosa/url-shortner-mvp/libs/map_helper"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/dto"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/service"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/dto"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/service"
 )
 
 type AddShortURLHandler struct {

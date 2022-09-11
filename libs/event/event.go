@@ -6,9 +6,12 @@ import (
 	"fmt"
 	"strings"
 	"time"
+
+	"github.com/italorfeitosa/url-shortner-mvp/libs/unique_id"
 )
 
 type Event struct {
+	ID          string    `json:"id"`
 	AggregateID string    `json:"aggregate_id"`
 	Topic       string    `json:"topic"`
 	Data        any       `json:"data"`
@@ -36,11 +39,28 @@ func (e Event) Kind() string {
 func NewTopic(topic string) func(string, any) Event {
 	return func(aggregateID string, data any) Event {
 		return Event{
+			ID:          unique_id.New(),
 			AggregateID: aggregateID,
 			Topic:       topic,
 			Data:        data,
 			CreatedAt:   time.Now().UTC(),
 		}
+	}
+}
+
+type NewEventInput struct {
+	AggregateID string
+	Topic       string
+	Data        any
+}
+
+func New(in NewEventInput) Event {
+	return Event{
+		ID:          unique_id.New(),
+		AggregateID: in.AggregateID,
+		Topic:       in.Topic,
+		Data:        in.Data,
+		CreatedAt:   time.Now().UTC(),
 	}
 }
 

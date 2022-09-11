@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS links (
+    ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Title VARCHAR(255) NOT NULL,
+    Description VARCHAR(2000),
+    RedirectTo MEDIUMTEXT NOT NULL,
+    WorkspaceID  VARCHAR(36) NOT NULL, 
+    CreatedAt DATETIME NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE INDEX idx_workspace_links ON links (WorkspaceID);

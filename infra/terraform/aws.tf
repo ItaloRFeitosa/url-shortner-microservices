@@ -12,8 +12,8 @@ provider "aws" {
   }
 }
 
-resource "aws_dynamodb_table" "url-redirect" {
-  name           = "url-redirect"
+resource "aws_dynamodb_table" "link_redirect" {
+  name           = "link_redirect"
   billing_mode   = "PROVISIONED"
   read_capacity  = 1
   write_capacity = 1

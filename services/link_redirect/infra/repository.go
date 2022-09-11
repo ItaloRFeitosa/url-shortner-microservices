@@ -10,7 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/domain"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/domain"
 )
 
 type DynamoDBRepository struct {
@@ -25,7 +25,7 @@ func NewDynamoDBRepository() *DynamoDBRepository {
 func (d *DynamoDBRepository) Insert(ctx context.Context, url *domain.ShortURL) error {
 	PK := fmt.Sprint("SHORT_URL#", url.ID)
 	_, err := d.d.PutItem(ctx, &dynamodb.PutItemInput{
-		TableName: aws.String("url-redirect"),
+		TableName: aws.String("link_redirect"),
 		Item: map[string]types.AttributeValue{
 			"PK": &types.AttributeValueMemberS{
 				Value: PK,
@@ -57,7 +57,7 @@ func (d *DynamoDBRepository) FindRedirectURL(ctx context.Context, ID int) (strin
 	PK := fmt.Sprint("SHORT_URL#", ID)
 
 	result, err := d.d.GetItem(ctx, &dynamodb.GetItemInput{
-		TableName: aws.String("url-redirect"),
+		TableName: aws.String("link_redirect"),
 		Key: map[string]types.AttributeValue{
 			"PK": &types.AttributeValueMemberS{
 				Value: PK,

@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/domain"
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/dto"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/domain"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/dto"
 )
 
 func TestDynamoDBRepository_Insert(t *testing.T) {

@@ -3,7 +3,7 @@ package domain
 import (
 	"time"
 
-	"github.com/italorfeitosa/url-shortner-mvp/services/url-redirect/dto"
+	"github.com/italorfeitosa/url-shortner-mvp/services/link_redirect/dto"
 )
 
 type ShortURL struct {
